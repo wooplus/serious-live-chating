@@ -19,6 +19,8 @@ export default {
     let password = ref("");
     let { error, createAccount } = useSignup();
     let signUp = async () => {
+      if (name) {
+      }
       let res = await createAccount(email.value, password.value, name.value);
       res.user.updateProfile({ displayName: name.value });
       if (res) {

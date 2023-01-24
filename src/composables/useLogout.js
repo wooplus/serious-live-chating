@@ -6,6 +6,7 @@ let error = ref(null);
 let signOut = async () => {
   try {
     let res = await auth.signOut();
+
     console.log("user log out");
     return res;
   } catch (err) {
